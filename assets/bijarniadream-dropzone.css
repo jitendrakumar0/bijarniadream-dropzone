@@ -1,0 +1,329 @@
+.dropzone {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+}
+.dropzone input {
+  display: none;
+}
+.dropzone .overlay-layer {
+  border-radius: 0.8rem;
+  border: 2px solid #000046;
+  transition: 0.3s all;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.dropzone .dropzone-text {
+  padding: 25px;
+}
+.dropzone .dropzone-text .dropzone-icon {
+  display: inline-block;
+  color: #000046;
+  transition: 0.3s all;
+}
+.dropzone .dropzone-text .dropzone-icon .cloudUploadOutline {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.dropzone .dropzone-text .dropzone-icon .cloudUploadSharp {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+.dropzone .dropzone-text .dropzone-content {
+  font-size: 13px;
+  color: #000046;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+.dropzone .dropzone-text .dropzone-content-after {
+  font-size: 13px;
+  color: #000046;
+  font-weight: bold;
+  transition: 0.3s all;
+  display: none;
+}
+.dropzone:not(.has-images).dropzone-over .overlay-layer {
+  border: 2px dashed #000046;
+}
+.dropzone:not(.has-images).dropzone-over .dropzone-text .dropzone-icon {
+  color: #000046;
+}
+.dropzone:not(.has-images).dropzone-over .dropzone-text .dropzone-icon .cloudUploadOutline {
+  display: none;
+}
+.dropzone:not(.has-images).dropzone-over .dropzone-text .dropzone-icon .cloudUploadSharp {
+  display: inline-block;
+}
+.dropzone:not(.has-images).dropzone-over .dropzone-text .dropzone-content {
+  display: none;
+}
+.dropzone:not(.has-images).dropzone-over .dropzone-text .dropzone-content-after {
+  color: #000046;
+  display: block;
+}
+.dropzone:not(.has-images):hover .overlay-layer {
+  border: 2px solid #000046;
+}
+.dropzone:not(.has-images):hover .dropzone-text .dropzone-icon {
+  color: #000046;
+}
+.dropzone:not(.has-images):hover .dropzone-text .dropzone-icon .cloudUploadOutline {
+  display: none;
+}
+.dropzone:not(.has-images):hover .dropzone-text .dropzone-icon .cloudUploadSharp {
+  display: inline-block;
+}
+.dropzone:not(.has-images):hover .dropzone-text .dropzone-content {
+  color: #000046;
+}
+.dropzone:not(.has-images):hover .dropzone-text .dropzone-content-after {
+  color: #000046;
+}
+.dropzone.has-images .dropzone-text {
+  border-radius: 0.8rem;
+  border: 2px dashed #000046;
+  transition: 0.3s all;
+  margin-bottom: 20px;
+  flex-direction: row !important;
+  justify-content: center;
+  padding: 15px;
+}
+.dropzone.has-images .dropzone-text .dropzone-icon {
+  display: inline-block;
+  color: #000046;
+  transition: 0.3s all;
+}
+.dropzone.has-images .dropzone-text .dropzone-icon .cloudUploadOutline {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+.dropzone.has-images .dropzone-text .dropzone-icon .cloudUploadSharp {
+  display: none;
+  width: 22px;
+  height: 22px;
+}
+.dropzone.has-images .dropzone-text .dropzone-content {
+  font-size: 13px;
+  color: #000046;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+.dropzone.has-images .dropzone-text .dropzone-content-after {
+  font-size: 13px;
+  color: #000046;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+.dropzone.has-images .dropzone-text:hover {
+  border: 2px dashed #000046;
+}
+.dropzone.has-images .dropzone-text:hover .dropzone-icon {
+  color: #000046;
+}
+.dropzone.has-images .dropzone-text:hover .dropzone-icon .cloudUploadOutline {
+  display: none;
+}
+.dropzone.has-images .dropzone-text:hover .dropzone-icon .cloudUploadSharp {
+  display: inline-block;
+}
+.dropzone.has-images .dropzone-text:hover .dropzone-content {
+  color: #000046;
+}
+.dropzone.has-images .preview .image-container {
+  padding: 12px;
+}
+.dropzone.has-images .preview .image-container .image-container-inner {
+  border-radius: 0.8rem;
+  aspect-ratio: 10/10;
+  box-shadow: 0px 5px 10px 0px silver;
+  border: 2px solid silver;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dropzone.has-images .preview .image-container .image-container-inner img {
+  border-radius: 0.8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  aspect-ratio: 10/10;
+}
+.dropzone.has-images .preview .image-container .image-container-inner button {
+  position: absolute;
+  inset: 10px 10px auto auto;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./icons/closeCircleOutline.svg);
+  background-size: cover;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box {
+  width: 80px;
+  height: 80px;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box .otherFilesIcon {
+  background-image: url(./icons/document.svg);
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  position: absolute;
+  inset: 0;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box .otherFilesName {
+  font-size: 13px;
+  color: #1CB5E0;
+  font-weight: 900;
+  padding: 34px 17px 10px 16px;
+  font-style: normal;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.docx .otherFilesIcon {
+  background-image: url(./icons/docs.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.docx .otherFilesName {
+  color: #2784FC;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.html .otherFilesIcon {
+  background-image: url(./icons/html.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.html .otherFilesName {
+  color: #E14B17;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.glb .otherFilesIcon {
+  background-image: url(./icons/glb.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.glb .otherFilesName {
+  color: #028633;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mp4 .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mov .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.wmv .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.flv .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.avi .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.avchd .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.webm .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mkv .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.wav .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.aiff .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mp3 .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.aac .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.ogg .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.wma .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.flac .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.alac .otherFilesIcon {
+  background-image: url(./icons/mp4.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mp4 .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mov .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.wmv .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.flv .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.avi .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.avchd .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.webm .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mkv .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.wav .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.aiff .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.mp3 .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.aac .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.ogg .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.wma .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.flac .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.alac .otherFilesName {
+  color: #D70B5A;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.pdf .otherFilesIcon {
+  background-image: url(./icons/pdf.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.pdf .otherFilesName {
+  color: #F32217;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.zip .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.rar .otherFilesIcon, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.rar4 .otherFilesIcon {
+  background-image: url(./icons/zip.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.zip .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.rar .otherFilesName, .dropzone.has-images .preview .image-container .image-container-inner .image-container-box.rar4 .otherFilesName {
+  color: #F5C775;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.sql .otherFilesIcon {
+  background-image: url(./icons/sql.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.sql .otherFilesName {
+  color: #E66C03;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.exe .otherFilesIcon {
+  background-image: url(./icons/exe.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.exe .otherFilesName {
+  color: #498BB1;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.md .otherFilesIcon {
+  background-image: url(./icons/md.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.md .otherFilesName {
+  color: #006CA3;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.fig .otherFilesIcon {
+  background-image: url(./icons/fig.svg);
+}
+.dropzone.has-images .preview .image-container .image-container-inner .image-container-box.fig .otherFilesName {
+  color: #54697A;
+}
+.dropzone.has-images .preview .image-container .image-container-inner .otherFilesName {
+  font-size: 12px;
+  color: #000046;
+  font-weight: bold;
+  padding: 0px 20px;
+}
+.dropzone.has-images .preview .image-container .image-container-inner:hover img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.dropzone.has-images .preview .image-container .image-container-inner:hover button:hover {
+  background-image: url(./icons/closeCircle.svg);
+  background-size: cover;
+}
+.dropzone.has-images > input[type=file]:not([multiple]) ~ .previewBox > .preview .image-container {
+  width: 100% !important;
+}
+.dropzone.has-images > input[type=file]:not([multiple]) ~ .previewBox > .preview .image-container .image-container-inner {
+  aspect-ratio: 10/3;
+}
+.dropzone.has-images > input[type=file]:not([multiple]) ~ .previewBox > .preview .image-container .image-container-inner img {
+  aspect-ratio: 10/3;
+}
+.dropzone.has-images.dropzone-over .dropzone-text {
+  border: 2px dashed #000046;
+}
+.dropzone.has-images.dropzone-over .dropzone-text .dropzone-icon {
+  color: #000046;
+}
+.dropzone.has-images.dropzone-over .dropzone-text .dropzone-icon .cloudUploadOutline {
+  display: none;
+}
+.dropzone.has-images.dropzone-over .dropzone-text .dropzone-icon .cloudUploadSharp {
+  display: inline-block;
+}
+.dropzone.has-images.dropzone-over .dropzone-text .dropzone-content {
+  color: #000046;
+  display: none;
+}
+.dropzone.has-images.dropzone-over .dropzone-text .dropzone-content-after {
+  color: #000046;
+  display: block;
+}
+.dropzone .invalid-feedback {
+  display: none !important;
+  position: absolute;
+  bottom: -22px;
+  left: 0px;
+  padding: 0;
+}
+
+.was-validated .dropzone:not(.has-images) {
+  margin-bottom: 22px;
+}
+.was-validated .dropzone:not(.has-images) input[type=file][required] ~ .overlay-layer {
+  border-color: red;
+}
+.was-validated .dropzone:not(.has-images) input[type=file][required] ~ .dropzone-text .dropzone-icon {
+  color: red;
+}
+.was-validated .dropzone:not(.has-images) input[type=file][required] ~ .dropzone-text .dropzone-content {
+  color: red;
+}
+.was-validated .dropzone:not(.has-images) input[type=file][required] ~ .dropzone-text .dropzone-content-after {
+  color: red;
+}
+.was-validated .dropzone:not(.has-images) input[type=file][required] ~ .invalid-feedback {
+  display: block !important;
+}/*# sourceMappingURL=bijarniadream-dropzone.css.map */

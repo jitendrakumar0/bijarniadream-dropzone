@@ -1,0 +1,413 @@
+
+.dropzone {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+  & input {
+    display: none;
+  }
+  & .overlay-layer {
+    border-radius: 0.8rem;
+    border: 2px solid #000046;
+    transition: 0.3s all;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  & .dropzone-text {
+    padding: 25px;
+    & .dropzone-icon {
+      display: inline-block;
+      color: #000046;
+      transition: .3s all;
+      & .cloudUploadOutline {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+      }
+      & .cloudUploadSharp {
+        display: none;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    & .dropzone-content {
+      font-size: 13px;
+      color: #000046;
+      font-weight: bold;
+      transition: .3s all;
+    }
+    & .dropzone-content-after {
+      font-size: 13px;
+      color: #000046;
+      font-weight: bold;
+      transition: .3s all;
+      display: none;
+    }
+  }
+  &:not(.has-images).dropzone-over {
+    & input {
+    }
+    & .overlay-layer {
+      border: 2px dashed #000046;
+    }
+    & .dropzone-text {
+      & .dropzone-icon {
+        color: #000046;
+        & .cloudUploadOutline {
+          display: none;
+        }
+        & .cloudUploadSharp {
+          display: inline-block;
+        }
+      }
+      & .dropzone-content {
+        display: none;
+      }
+      & .dropzone-content-after {
+        color: #000046;
+        display: block;
+      }
+    }
+    & .preview {
+      & .image-container {
+        & img {
+
+        }
+        & button {
+
+        }
+      }
+    }
+  }
+  &:not(.has-images):hover {
+    & input {
+    }
+    & .overlay-layer {
+      border: 2px solid #000046;
+    }
+    & .dropzone-text {
+      & .dropzone-icon {
+        color: #000046;
+        & .cloudUploadOutline {
+          display: none;
+        }
+        & .cloudUploadSharp {
+          display: inline-block;
+        }
+      }
+      & .dropzone-content {
+        color: #000046;
+      }
+      & .dropzone-content-after {
+        color: #000046;
+      }
+    }
+    & .preview {
+      & .image-container {
+        & img {
+
+        }
+        & button {
+
+        }
+      }
+    }
+  }
+  &.has-images {
+    & .overlay-layer {
+
+    }
+    & .dropzone-text {
+      border-radius: 0.8rem;
+      border: 2px dashed #000046;
+      transition: 0.3s all;
+      margin-bottom: 20px;
+      flex-direction: row !important;
+      justify-content: center;
+      padding: 15px;
+      & .dropzone-icon {
+        display: inline-block;
+        color: #000046;
+        transition: .3s all;
+        & .cloudUploadOutline {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+        }
+        & .cloudUploadSharp {
+          display: none;
+          width: 22px;
+          height: 22px;
+        }
+      }
+      & .dropzone-content {
+        font-size: 13px;
+        color: #000046;
+        font-weight: bold;
+        transition: .3s all;
+      }
+      & .dropzone-content-after {
+        font-size: 13px;
+        color: #000046;
+        font-weight: bold;
+        transition: .3s all;
+      }
+      &:hover {
+        border: 2px dashed #000046;
+        & .dropzone-icon {
+          color: #000046;
+          & .cloudUploadOutline {
+            display: none;
+          }
+          & .cloudUploadSharp {
+            display: inline-block;
+          }
+        }
+        & .dropzone-content {
+          color: #000046;
+        }
+      }
+    }
+    & .preview {
+      & .image-container {
+        padding: 12px;
+        & .image-container-inner {
+          border-radius: 0.8rem;
+          aspect-ratio: 10/10;
+          box-shadow: 0px 5px 10px 0px silver;
+          border: 2px solid silver;
+          background-color: black;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          & img {
+            border-radius: 0.8rem;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            aspect-ratio: 10/10;
+          }
+          & button {
+            position: absolute;
+            inset: 10px 10px auto auto;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            border: none;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./icons/closeCircleOutline.svg);
+            background-size: cover;
+          }
+          & .image-container-box {
+            width: 80px;
+            height: 80px;
+            & .otherFilesIcon {
+              background-image: url(./icons/document.svg);
+              width: 100%;
+              height: 100%;
+              display: block;
+              background-repeat: no-repeat !important;
+              background-position: center !important;
+              background-size: contain !important;
+              position: absolute;
+              inset: 0;
+            }
+            & .otherFilesName {
+              font-size: 13px;
+              color: #1CB5E0;
+              font-weight: 900;
+              padding: 34px 17px 10px 16px;
+              font-style: normal;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &.docx {
+              & .otherFilesIcon {
+                background-image: url(./icons/docs.svg);
+              }
+              & .otherFilesName {
+                color: #2784FC;
+              }
+            }
+            &.html {
+              & .otherFilesIcon {
+                background-image: url(./icons/html.svg);
+              }
+              & .otherFilesName {
+                color: #E14B17;
+              }
+            }
+            &.glb {
+              & .otherFilesIcon {
+                background-image: url(./icons/glb.svg);
+              }
+              & .otherFilesName {
+                color: #028633;
+              }
+            }
+            &.mp4, &.mov, &.wmv, &.flv, &.avi, &.avchd, &.webm, &.mkv, &.wav, &.aiff, &.mp3, &.aac, &.ogg, &.wma, &.flac, &.alac {
+              & .otherFilesIcon {
+                background-image: url(./icons/mp4.svg);
+              }
+              & .otherFilesName {
+                color: #D70B5A;
+              }
+            }
+            &.pdf {
+              & .otherFilesIcon {
+                background-image: url(./icons/pdf.svg);
+              }
+              & .otherFilesName {
+                color: #F32217;
+              }
+            }
+            &.zip, &.rar, &.rar4 {
+              & .otherFilesIcon {
+                background-image: url(./icons/zip.svg);
+              }
+              & .otherFilesName {
+                color: #F5C775;
+              }
+            }
+            &.sql {
+              & .otherFilesIcon {
+                background-image: url(./icons/sql.svg);
+              }
+              & .otherFilesName {
+                color: #E66C03;
+              }
+            }
+            &.exe {
+              & .otherFilesIcon {
+                background-image: url(./icons/exe.svg);
+              }
+              & .otherFilesName {
+                color: #498BB1;
+              }
+            }
+            &.md {
+              & .otherFilesIcon {
+                background-image: url(./icons/md.svg);
+              }
+              & .otherFilesName {
+                color: #006CA3;
+              }
+            }
+            &.fig {
+              & .otherFilesIcon {
+                background-image: url(./icons/fig.svg);
+              }
+              & .otherFilesName {
+                color: #54697A;
+              }
+            }
+          }
+          & .otherFilesName {
+            font-size: 12px;
+            color: #000046;
+            font-weight: bold;
+            padding: 0px 20px;
+          }
+          &:hover {
+            & img {
+              object-fit: contain;
+            }
+            & .videoIcon {
+
+            }
+            & .videoName {
+              
+            }
+            & button:hover {
+              background-image: url(./icons/closeCircle.svg);
+              background-size: cover;
+            }
+          }
+        }
+      }
+    }
+    & > input {
+      &[type=file]:not([multiple]) {
+        & ~ .previewBox > .preview {
+          & .image-container {
+            width: 100% !important;
+            & .image-container-inner {
+              aspect-ratio: 10/3;
+              & img {
+                aspect-ratio: 10/3;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.dropzone-over {
+      & .dropzone-text {
+        border: 2px dashed #000046;
+        & .dropzone-icon {
+          color: #000046;
+          & .cloudUploadOutline {
+            display: none;
+          }
+          & .cloudUploadSharp {
+            display: inline-block;
+          }
+        }
+        & .dropzone-content {
+          color: #000046;
+          display: none;
+        }
+        & .dropzone-content-after {
+          color: #000046;
+          display: block;
+        }
+      }
+    }
+  }
+  & .invalid-feedback {
+    display: none !important;
+    position: absolute;
+    bottom: -22px;
+    left: 0px;
+    padding: 0;
+  }
+}
+
+
+.was-validated {
+  & .dropzone:not(.has-images) {
+    margin-bottom: 22px;
+    & input[type=file][required] {
+      & ~ .overlay-layer {
+        border-color: red;
+      }
+      & ~ .dropzone-text {
+        & .dropzone-icon {
+          color: red;
+          & .cloudUploadOutline {
+          }
+          & .cloudUploadSharp {
+          }
+        }
+        & .dropzone-content {
+          color: red;
+        }
+        & .dropzone-content-after {
+          color: red;
+        }
+      }
+      & ~ .invalid-feedback {
+        display: block !important;
+      }
+    }
+  }
+}

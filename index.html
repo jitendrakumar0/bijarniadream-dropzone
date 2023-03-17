@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./assets/bijarniadream-dropzone.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body p-4">
+              <form class="row g-4 needs-validation-componentsForms" novalidate>
+
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="dropzone row mx-0">
+                        <input type="hidden" name="dropdata-dropzone1">
+                        <input type="file" name="dropzone1[]" id="dropzone1" multiple required data-required>
+                        <span class="overlay-layer"></span>
+                        <label for="dropzone1" class="dropzone-text col-12 d-flex align-items-center flex-column gap-2">
+                          <span class="dropzone-icon">
+                            <img class="cloudUploadOutline" src="assets/icons/cloudUploadOutline.svg" alt="">
+                            <img class="cloudUploadSharp" src="assets/icons/cloudUploadSharp.svg" alt="">
+                          </span>
+                          <span class="dropzone-content">Browse or drag a file here</span>
+                          <span class="dropzone-content-after">Please drop me here</span>
+                        </label>
+                        <div class="invalid-feedback">Please upload atleast one image.</div>
+                        <div class="col-12 px-0 previewBox">
+                          <div class="preview row justify-content-center"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="dropzone row mx-0">
+                        <input type="hidden" name="dropdata-dropzone6">
+                        <input type="file" name="dropzone6[]" id="dropzone6" multiple accept="image/*,video/*">
+                        <span class="overlay-layer"></span>
+                        <label for="dropzone6" class="dropzone-text col-12 d-flex align-items-center flex-column gap-2">
+                          <span class="dropzone-icon">
+                            <img class="cloudUploadOutline" src="assets/icons/cloudUploadOutline.svg" alt="">
+                            <img class="cloudUploadSharp" src="assets/icons/cloudUploadSharp.svg" alt="">
+                          </span>
+                          <span class="dropzone-content">Browse or drag a file here</span>
+                          <span class="dropzone-content-after">Please drop me here</span>
+                        </label>
+                        <div class="invalid-feedback">Please upload atleast one image.</div>
+                        <div class="col-12 px-0 previewBox">
+                          <div class="preview row justify-content-center"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-12 d-flex align-itmes-center justify-content-end gap-2">
+                  <button class="btn btn-secondary py-2 d-flex justify-content-center align-items-center gap-2" type="reset">Reset</button>
+                  <button class="btn btn-primary py-2 d-flex justify-content-center align-items-center gap-2" type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./assets/bijarniadream-dropzone.js"></script>
+  </body>
+</html>
